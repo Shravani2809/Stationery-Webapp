@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './ProductItem.module.css';
+import ProductItemForm from './ProductItemForm';
 
 const ProductItem = props => {
   const price = `$${props.price.toFixed(2)}`;
@@ -16,7 +17,9 @@ const ProductItem = props => {
           {price}
         </div>
       </div>
-      <div />
+      <div>
+        <ProductItemForm />
+      </div>
     </li>
   );
 };
