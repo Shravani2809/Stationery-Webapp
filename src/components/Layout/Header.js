@@ -3,7 +3,7 @@ import classes from "./Header.module.css"
 import productsImg from "../../assets/products.jpeg"
 import HeaderCartButton from "./HeaderCartButton"
 
-const Header =(props)=>{
+const Header =()=>{
     return <>
         <header className={classes.header}>
             <h1>...one STOP for  STATIONERY</h1>

@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './AvailableProducts.module.css';
+import ProductItem from './ProductItem/ProductItem';
+import Card from '../UI/Card';
 
 const DUMMY_PRODUCTS = [
   {
@@ -31,15 +33,20 @@ const DUMMY_PRODUCTS = [
 const AvailableProducts = () => {
   return (
     <section className={classes.products}>
-      <ul>
-        {DUMMY_PRODUCTS.map(item => {
-          return (
-            <li>
-              {item.name}
-            </li>
-          );
-        })}
-      </ul>
+      <Card>
+        <ul>
+          {DUMMY_PRODUCTS.map(item => {
+            return (
+              <ProductItem
+                key={item.id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+              />
+            );
+          })}
+        </ul>
+      </Card>
     </section>
   );
 };
