@@ -2,13 +2,13 @@ import React from 'react';
 import classes from './ProductItemForm.module.css';
 import Input from '../../UI/Input';
 
-const ProductItemForm = () => {
+const ProductItemForm = props => {
   return (
     <form className={classes.form}>
       <Input
         label="Amount"
         input={{
-          id: 'amount',
+          id: 'amount' + props.id,
           type: 'number',
           min: '1',
           max: '10',

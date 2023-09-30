@@ -18,7 +18,7 @@ const ProductItem = props => {
         </div>
       </div>
       <div>
-        <ProductItemForm />
+        <ProductItemForm id={props.id} />
       </div>
     </li>
   );
